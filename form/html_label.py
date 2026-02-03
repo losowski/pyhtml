@@ -11,10 +11,10 @@ from .. import html_base
 
 
 class HTMLLabel (html_base.HTMLBase):
-	def __init__(self, inputName):
+	def __init__(self, inputName, labelName):
 		super().__init__("label")
 		self.logger				=	logging.getLogger("HTMLLabel")
-		self.XMLObj.text		=	inputName.title().replace("_", " ")
+		self.XMLObj.text		=	labelName
 		self.setAttrib("for", "{inputName}".format(inputName = inputName))
 
 	def __del__(self):
