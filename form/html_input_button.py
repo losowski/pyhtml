@@ -20,6 +20,9 @@ class HTMLInputButton (html_input.HTMLInputBase):
 	def __del__(self):
 		super().__del__()
 
+	def setOnClick(self, functionName):
+		name = "{name}()".format(name = functionName)
+		self.setAttrib("onclick", name)
 
 
 ## HTMLInputSubmit
