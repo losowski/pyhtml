@@ -58,3 +58,9 @@ class HTMLForm (html_form_base.HTMLFormBase):
 
 	def setAction(self, action):
 		self.setAttrib("action", "{action}".format(action = action))
+
+	def setMethod(self, method):
+		self.setAttrib("method", "{method}".format(method = method))
+
+	def setTarget(self, target):
+		self.setAttrib("target", "{target}".format(target = target))
