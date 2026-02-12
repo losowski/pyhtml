@@ -46,8 +46,8 @@ class HTMLInputHidden (html_input.HTMLInputBase):
 class HTMLInputPassword (html_input.HTMLInputBase):
 	def __init__(self, name):
 		super().__init__(html_input.HTMLInputBase.PASSWORD, name, "")
-		# TODO: Fix the Value setting (set to placeholder)
 		self.logger				=	logging.getLogger("HTMLInputPassword")
+		self.setId(name)
 
 	def __del__(self):
 		super().__del__()

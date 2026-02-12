@@ -29,10 +29,14 @@ class HTMLFormBase (html_build_base.HTMLBuildBase):
 
 
 	## FORM DATA COMPONENTS
-	def addLabel(self, inputName):
-		hLabel = html_label.HTMLLabel(inputName)
+	def addLabel(self, inputName, labelName):
+		hLabel = html_label.HTMLLabel(inputName, labelName)
 		self.appendElement(hLabel.get())
 		return hLabel
+
+	def addPrettyLabel(self, inputName,):
+		labelName = inputName.title().replace("_", " ")
+		return self.addLabel(inputName, labelName)
 
 
 	## INPUT
