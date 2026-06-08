@@ -59,7 +59,7 @@ class HTMLBuildBase (html_base.HTMLBase):
 
 	def mkDiv(self, hObject, name, identifier, div):
 		if (div):
-			self.addDivObject(name, hObject.get())
+			self.addDivObject(name, identifier, hObject.get())
 		else:
 			self.addHTMLtoElement(hObject.get())
 
